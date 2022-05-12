@@ -3,7 +3,7 @@ import user from "../images/user.png";
 import { FaTrashAlt } from "react-icons/fa";
 
 const ContactCard = (props) => {
-  const { name, email, mobile } = props.individualcontact;
+  const { id, name, email, mobile } = props.individualcontact;
   return (
     <>
       <div className="container">
@@ -12,7 +12,7 @@ const ContactCard = (props) => {
             className="rounded-circle"
             src={user}
             alt=""
-            style={{ width: "67px " , height: "67px;" }}
+            style={{ width: "67px " , height: "67px" }}
           />
           <div className="mx-3">
             <h6 className="mb-0">{name}</h6>
@@ -22,7 +22,8 @@ const ContactCard = (props) => {
         </div>
       </div>
       <div>
-        <FaTrashAlt style={{ color: "red", fontSize: "25px" }} />
+        <FaTrashAlt style={{ color: "red", fontSize: "25px" }} 
+        onClick={() => props.clickHandeler(id)}/>
       </div>
     </>
   );

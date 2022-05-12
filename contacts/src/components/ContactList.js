@@ -5,15 +5,17 @@ import ContactCard from "./ContactCard";
 
 const ContactList = (props) => {
   console.log(props);
-
+  const removeContactHandeler = (id)=>{
+    props.getContactID(id);
+  }
   const renderContactList = props.contacts.map((contact) => {
     
-    console.log(contact)
+    // console.log(contact)
    
     return (
 
       <div className="d-flex container align-items-center justify-content-between mb-4 border-bottom py-2">
-            <ContactCard individualcontact = {contact}/>
+            <ContactCard individualcontact = {contact} clickHandeler={removeContactHandeler}/>
       </div>
         
      
