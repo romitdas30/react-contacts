@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class addContact extends Component {
 
@@ -24,6 +25,7 @@ export default class addContact extends Component {
   render() {
     return (
       <div className="container pt-3">
+        <h3 className="mb-5"> Add Contact:</h3>
         <form action="" method="post" onSubmit={this.add}>
           
          <div className="mb-3">
@@ -57,7 +59,12 @@ export default class addContact extends Component {
           value={this.state.mobile}
            />
           </div>
-          <button type="submit" className="btn btn-success">Add</button>
+          <div className="d-flex">
+            <button type="submit" className="btn btn-success ml-0" >Add</button>
+            <Link to="/">
+            <button type="button" className="btn btn-primary mx-3">Contacts list</button>
+            </Link>
+          </div>
         </form>
       </div>
     );

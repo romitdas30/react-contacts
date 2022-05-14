@@ -2,10 +2,10 @@ import React from 'react'
 
 export const Header = () => {
   return (
-    <div className="text-center">
-        <h3 className="container pt-3">
+    <div className="text-center  border-bottom ">
+        <h4 className="container pt-2 mb-3">
         Contact List Project
-        </h3>
+        </h4>
     </div>
   );
 };
